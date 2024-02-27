@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 
 
     'django.middleware.security.SecurityMiddleware',
@@ -125,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "backend/static",
+    BASE_DIR / 'backend/static',
 ]
 
 
@@ -138,4 +139,4 @@ MEDIA_ROOT = 'backend/static/images'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOW_ALL_ORIGINS: True
+CORS_ALLOW_CREDENTIALS: True
